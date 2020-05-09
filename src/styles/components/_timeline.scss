@@ -1,0 +1,201 @@
+
+// /* Timeline */
+
+// .timeline {
+//   padding: 40px 20px;
+//   position: relative;
+//   display: flex;
+// }
+
+// .items {
+//   width: 30%;
+//   position: relative;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .item {
+//   color: #E85611;
+//   font-weight: bold;
+//   position: relative;
+//   margin: 50px 0 10px;
+// }
+
+// .item .texto {
+//   position: absolute;
+//   top: 0px;
+//   right: 100%;
+// }
+
+// .item::after {
+//     content: " ";
+//     top: -25px;
+//     right: 50%;
+//     margin-right: -9px;
+//     position: absolute;
+//     width: 18px;
+//     height: 18px;
+//     border-radius: 50%;
+//     background: #ccc;
+// }
+
+// .item:hover {
+//   cursor: pointer;
+//   color: black;
+// }
+
+// .item:hover::after {
+//   background-color: #E85611;
+// }
+
+// .item.selected::after {
+//   background-color: #E85611;
+//   -webkit-animation-name: linea_puntos;
+//   -webkit-animation-duration: 0.5s;
+//   -webkit-animation-fill-mode: forwards;
+//   -webkit-animation-timing-function: ease;
+//   animation-name: linea_puntos;
+//   animation-duration: 0.5s;
+//   animation-fill-mode: forwards;
+//   animation-timing-function: ease;
+// }
+
+//  @-webkit-keyframes linea_puntos {
+//     from {  
+//         top:-25px;
+//         -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+//         -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+//         box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+//         }
+//     to {   
+//         top:-35px;
+//         -webkit-box-shadow: 0px 60px 0px 0px rgba(0,0,0,0);
+//         -moz-box-shadow: 0px 20px 10px -5px rgba(0, 0, 0, 0.5);
+//         box-shadow: 0px 20px 10px -5px rgba(0, 0, 0, 0.5);
+//         }
+// }
+    
+// @keyframes linea_puntos {
+//     from { 
+//         top:-25px;
+//         -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+//         -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+//         box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);}
+//     to { 
+//         top:-35px;
+//         -webkit-box-shadow: 0px 20px 10px -5px rgba(0, 0, 0, 0.5);
+//         -moz-box-shadow: 0px 20px 10px -5px rgba(0, 0, 0, 0.5);
+//         box-shadow: 0px 20px 10px -5px rgba(0, 0, 0, 0.5);
+//         }
+// }
+
+// .linea-gris {
+//   height: 100px; 
+//   width: 4px; 
+//   background-color: rgb(204, 204, 204);
+// }
+
+// .textos {
+//   width: 70%;
+// }
+
+// .texto {
+//   display: none;
+// }
+
+// .texto:nth-child(2) {
+//   margin-top: 190px;
+// }
+
+// .texto:nth-child(3) {
+//   margin-top: 380px;
+// }
+
+// .texto:nth-child(4) {
+//   margin-top: 570px;
+// }
+
+// .texto:nth-child(5) {
+//   margin-top: 760px;
+// }
+
+// .texto:nth-child(6) {
+//   margin-top: 950px;
+// }
+
+// .texto.selected {
+//   display: block;
+// }
+
+/* Timeline images */
+
+.timeline-img {
+  padding: 40px;
+
+    .item {
+        display: flex;
+        align-items: center;
+
+        .item-img {
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                transition: all 300ms ease-in-out;
+            }
+
+            img:hover {
+                cursor: pointer;
+                box-shadow: 6px 8px 10px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                transition: all 300ms ease-in-out;
+            }
+        }
+
+        .texto-img {
+            width: 70%;
+            opacity: 0;
+            transition: opacity 500ms ease-in-out;
+        }
+
+        &.selected {
+
+            .item-img {
+
+                img {
+                    box-shadow: 6px 8px 10px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                }
+            }
+
+            .texto-img {
+                opacity: 1;
+                transition: opacity 500ms ease-in-out;
+            }
+        }
+
+
+    }
+}
+
+.linea-gris-container {
+    display: flex;
+    align-items: center;
+
+    .linea-gris-container-33 {
+        width: 30%;
+
+        .linea-gris {
+            margin: 0 auto;
+            height: 100px; 
+            width: 4px; 
+            background-color: rgb(204, 204, 204);
+        }
+    }
+
+}
+
+

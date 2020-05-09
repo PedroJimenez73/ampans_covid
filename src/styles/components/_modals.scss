@@ -1,0 +1,148 @@
+#overlay,
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+
+#overlay.show {
+  display: block;
+}
+
+#overlay.visible {
+  opacity: 1;
+}
+
+.overlay.abierto {
+  display: block; 
+  opacity: 1;
+}
+
+#modal-resume {
+    background: white;
+    border: 1px solid $danger-color;
+    border-radius: 4px;
+    min-width: 350px;
+    min-height: 220px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 210;
+    padding: 20px;
+    display: none;
+    opacity: 0;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+  }
+  
+  #modal-resume span {
+    align-self: flex-end;
+    color: rgba(25, 28, 31, 0.5);
+    font-size: 40px;
+    cursor: pointer;
+  }
+  
+  #modal-resume div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  #modal-resume.show {
+    display: flex;
+  }
+  
+  #modal-resume.visible {
+    opacity: 1;
+  }
+
+  @media (max-width: 440px) {
+    #modal-resume {
+      min-width: 250px;
+      min-height: 220px;
+      font-size: 16px;
+    }
+  }
+
+  #modal-help {
+    background: white;
+    border: 1px solid $danger-color;
+    border-radius: 4px;
+    position: fixed;
+    margin: 1em;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 2em);
+    height: calc(100vh - 2em);
+    z-index: 210;
+    padding: 1em;
+    display: none;
+    opacity: 0;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    overflow-y: auto;
+      
+    .aspa {
+      color: rgba(25, 28, 31, 0.5);
+      font-size: 40px;
+      cursor: pointer;
+      position: fixed;
+      top: 1em;
+      right: 1em;
+      width: 35px;
+      height: 35px;
+      border-radius: 25px;
+      @include flex(center,center);
+      background-color: white;
+      // box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3);
+
+    }
+  }
+
+  #modal-help .img-help {
+    text-align: center;
+  }
+
+  #modal-help img {
+    margin: 2em;
+    width: 60%;
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3);
+    align-self: center;
+  }
+
+  @media (max-width: 540px) {
+    #modal-help img {
+      margin: 2em 0;
+      width: 100%;
+    }
+  }
+
+  #modal-help.show {
+    display: block;
+  }
+  
+  #modal-help.visible {
+    opacity: 1;
+  }

@@ -1,0 +1,72 @@
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+button {
+    background-color: $brand-color;
+    border-radius: 4px;
+    border: 1px solid $brand-color;
+    font-size: 1em;
+    font-family: $main-font;
+    color: #ffffff;
+    box-shadow: 0 4px 16px 0 rgba(88,103,221,.15);
+    padding: 0.5em 1em;
+    transition: all 400ms ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        border: 1px solid $brand-color-hover;
+        background-color: $brand-color-hover;
+        box-shadow: 0 9px 16px 0 rgba(88,103,221,.25);
+        cursor: pointer;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+    }
+}
+
+button.outline {
+    background-color: white;
+    border: 1px solid $brand-color;
+    color: $brand-color;
+
+    &:hover {
+        border: 1px solid $brand-color-hover;
+        background-color: white;
+        color: $brand-color-hover;
+        box-shadow: 0 9px 16px 0 rgba(88,103,221,.25);
+    }
+}
+
+@keyframes button-active {
+    0%    { 
+            
+        }
+    100%  { 
+            outline: 0;
+        }
+}
+
+button:focus {
+    animation: button-active 1.5s linear forwards;
+}
+
+button.condicional {
+    opacity: 0;
+    animation: fadein 0.7s ease-in-out forwards;
+}
+
+button.jumbo {
+    width: 100%;
+    font-size: 1.3em;
+    padding: 0.3em;
+}
+
+button.help {
+    height: 35px;
+    width: 35px;
+    border-radius: 25px;
+    margin-right: 1em;
+    @include flex(center, center);
+}

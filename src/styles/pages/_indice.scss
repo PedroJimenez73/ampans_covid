@@ -1,0 +1,42 @@
+.indice {
+    max-width: 1280px;
+    margin: 0 auto;
+    @include flex-column(flex-start, flex-start);
+
+    .card {
+        width: calc(100% - 2em);
+        padding: 0;
+        margin: 1em;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: all 600ms ease-in-out;
+
+        div {
+            padding: 1em;
+            @include flex(space-between, center);
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            img {
+                width: 40px;
+                min-width: 40px;
+            }
+
+            &:hover {
+                cursor: pointer;
+                box-shadow: 6px 8px 10px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            }
+
+            &.lock:hover {
+                cursor: not-allowed;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            }
+        }
+
+    }
+}

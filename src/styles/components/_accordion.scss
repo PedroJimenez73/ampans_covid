@@ -1,0 +1,69 @@
+/* Acordeon */
+
+.acordeon {
+    width: 80%;
+    margin: 40px auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    background-color: white;
+  }
+  
+  @media (max-width: 540px) {
+    .acordeon {
+        width: 100%;
+    } 
+  }
+  
+  .acordeon .masInfo {
+  margin-bottom: 0;
+    margin-top: 0;
+    border: 0.5px solid rgb(233, 233, 233);
+    transition: border 300ms ease-in-out;
+  }
+  
+  .acordeon .masInfo.borde {
+    border-left: 4px solid $brand-color;
+  }
+  
+  .acordeon .masInfo > p {
+  opacity:1;
+  padding:20px 40px;
+  width:100%;
+  overflow:hidden;
+  cursor: pointer;
+  -webkit-transition:opacity 0.5s ease-in;  
+  -moz-transition:opacity 0.5s ease-in;  
+  -o-transition:opacity 0.5s ease-in;  
+    transition:opacity 0.5s ease-in;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 0;
+  }
+  
+  .acordeon .masInfo > p > span {
+    margin-right: 10px;
+    font-weight: 400;
+    color: black;
+    font-family: $titles-font;
+    font-size: 28px;
+  }
+  
+  .acordeon .masInfo > p .mas {
+    display: inline;
+  }
+  .acordeon .masInfo > p .menos {
+    display: none;
+  }
+  .acordeon .masInfo > p .mas.mostrada {
+    display: none;
+  }
+  .acordeon .masInfo > p .menos.mostrada {
+    display: inline;
+  }
+  
+  .acordeon .masInfo .content {
+    display:none;
+    padding: 0 40px 20px;
+    
+  }
+  

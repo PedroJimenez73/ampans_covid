@@ -1,0 +1,60 @@
+<div appScroll class="contenedor condicional">
+    <div class="row">
+        <div class="col-100">
+            <h2>Desplaçament de casa a la feina</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-100">
+            <p class="instructions">Fes clic a cada imatge per veure tota la informació</p>
+            <div #flexyNotIe class="flexy">
+                <div class="flip-card" (click)="flip(1)">
+                    <div class="front-card" style="display: flex; justify-content: center; align-items: center; background-color: white;">
+                        <img style="height: 175px; width: 274px" src="assets/img/COVID_12.jpg">
+                        <p class="orange-text">
+                            
+                        </p>
+                    </div>
+                    <div class="back-card">
+                        <p><b>Es prioritza el fet d’anar a la feina de forma individual</b> en cotxe, en bicicleta o caminant.</p>
+                    </div>
+                </div>                               
+                <div class="flip-card" (click)="flip(2)">
+                    <div class="front-card" style="display: flex; justify-content: center; align-items: center; background-color: white;">
+                        <img style="height: 175px; width: 274px" src="assets/img/COVID_13.jpg">
+                        <p class="orange-text">
+                            
+                        </p>
+                    </div >
+                    <div class="back-card">
+                        <p>En cas d’usar el <b>transport públic</b>, cal usar <b>mascareta higiènica i </b> mantenir la <b>distància de seguretat</b>.</p>
+                    </div>
+                </div>
+            </div>
+            <div #flexyIe class="flexy">
+                <div class="ie-card" (click)="flipIE(1)">
+                    <div class="ie-front-card" style="display: flex; justify-content: center; align-items: center; background-color: white;">
+                        <img style="height: 175px; width: 274px" src="assets/img/COVID_12.jpg">
+                        <p class="orange-text">
+                           
+                        </p>
+                    </div>
+                    <div class="ie-back-card">
+                        <p> <b>Es prioritza el fet d’anar a la feina de forma individual</b> en cotxe, en bicicleta o caminant. </p>
+                    </div>
+                </div>                               
+                <div class="ie-card" (click)="flipIE(2)">
+                    <div class="ie-front-card" style="display: flex; justify-content: center; align-items: center; background-color: white;">
+                        <img style="height: 175px; width: 274px" src="assets/img/COVID_13.jpg">
+                        <p class="orange-text">
+                            
+                        </p>
+                    </div >
+                    <div class="ie-back-card">
+                        <p>En cas d’usar el <b>transport públic</b>, cal usar <b>mascareta higiènica i </b> mantenir la <b>distància de seguretat</b>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

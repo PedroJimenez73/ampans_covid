@@ -1,0 +1,71 @@
+@keyframes bake-pie {
+    from {transform: rotate(0deg) translate3d(0,0,0)}
+}
+    
+.cont-chart {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(.75);
+    margin-bottom: -35px;
+}
+
+.step {
+    position: absolute;
+    top: 115px;
+    left: 94px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #004f52;
+    z-index: 10;
+}
+  
+.pie-chart {
+
+    &__pie {
+
+        display: inline-block;
+        position: relative;
+        height: 200px;
+        width: 200px;
+        transform: rotateZ(180deg);
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: 1;
+            width: 100px;
+            height: 100px;
+            background: #EEE;
+            border-radius: 50%;
+            top: 50px;
+            left: 50px;
+        }      
+    }
+      
+}
+
+.slice {
+
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    clip: rect(0px, 200px, 200px, 100px);
+    animation: bake-pie 1s;
+
+    span {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        clip: rect(0px, 200px, 200px, 100px);
+    }
+}

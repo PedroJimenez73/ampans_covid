@@ -1,0 +1,37 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f7f7f7;
+    height: 60px;
+    @include flex(space-between, center);
+    padding: 0 1em;
+
+    #counter {
+        background-color: white;
+        border: 1px solid $brand-color;
+        color: $brand-color;
+        font-size: 1em;
+        font-family: $main-font;
+        box-shadow: 0 4px 16px 0 rgba(88,103,221,.15);
+        height: 40px;
+        padding: 0.5em 1em;
+        border-radius: 4px;
+        margin: 0 0.5em;
+    }
+}
+
+@media (max-width: $small-device) {
+
+    footer.question {
+        @include flex-column(center, center);
+        flex-direction: column-reverse;
+        height: 150px;
+
+        div {
+            margin: 10px 0;
+        }
+    }
+}
+

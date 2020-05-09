@@ -1,0 +1,119 @@
+<div appScroll class="contenedor condicional">
+    <div class="row">
+        <div class="col-100">
+            <div class="actividades mostrada">
+                <h3>Resum d’autoavaluació</h3>
+                <hr>
+                <div style="display: flex; margin: 0; padding: 0;">
+                    <div class="col-50 columna">
+                        <div class="resultado">
+                            <span *ngIf="results[0]"><img src="assets/img/iconos/check-circle.svg"></span>
+                            <span *ngIf="!results[0]"><img src="assets/img/iconos/x-circle.svg"></span>
+                            <div>
+                                <p>PREGUNTA 1</p>
+                                <p *ngIf="results[0]">Correcta </p>
+                                <p *ngIf="!results[0]">Incorrecta </p>
+                            </div>
+                        </div>
+                        <div class="resultado">
+                            <span *ngIf="results[1]"><img src="assets/img/iconos/check-circle.svg"></span>
+                            <span *ngIf="!results[1]"><img src="assets/img/iconos/x-circle.svg"></span>
+                            <div>
+                                <p>PREGUNTA 2</p>
+                                <p *ngIf="results[1]">Correcta </p>
+                                <p *ngIf="!results[1]">Incorrecta </p>
+                            </div>
+                        </div>
+                        <div class="resultado">
+                            <span *ngIf="results[2]"><img src="assets/img/iconos/check-circle.svg"></span>
+                            <span *ngIf="!results[2]"><img src="assets/img/iconos/x-circle.svg"></span>
+                            <div>
+                                <p>PREGUNTA 3</p>
+                                <p *ngIf="results[2]">Correcta </p>
+                                <p *ngIf="!results[2]">Incorrecta </p>
+                            </div>
+                        </div>
+                        <div class="resultado">
+                            <span *ngIf="results[3]"><img src="assets/img/iconos/check-circle.svg"></span>
+                            <span *ngIf="!results[3]"><img src="assets/img/iconos/x-circle.svg"></span>
+                            <div>
+                                <p>PREGUNTA 4</p>
+                                <p *ngIf="results[3]">Correcta </p>
+                                <p *ngIf="!results[3]">Incorrecta </p>
+                            </div>
+                        </div>
+                        <div class="resultado">
+                            <span *ngIf="results[4]"><img src="assets/img/iconos/check-circle.svg"></span>
+                            <span *ngIf="!results[4]"><img src="assets/img/iconos/x-circle.svg"></span>
+                            <div>
+                                <p>PREGUNTA 5</p>
+                                <p *ngIf="results[4]">Correcta </p>
+                                <p *ngIf="!results[4]">Incorrecta </p>
+                            </div>
+                        </div>
+                        <div class="resultado">
+                            <span *ngIf="results[5]"><img src="assets/img/iconos/check-circle.svg"></span>
+                            <span *ngIf="!results[5]"><img src="assets/img/iconos/x-circle.svg"></span>
+                            <div>
+                                <p>PREGUNTA 6</p>
+                                <p *ngIf="results[5]">Correcta </p>
+                                <p *ngIf="!results[5]">Incorrecta </p>
+                            </div>
+                        </div>
+                        <div class="resultado">
+                            <span *ngIf="results[6]"><img src="assets/img/iconos/check-circle.svg"></span>
+                            <span *ngIf="!results[6]"><img src="assets/img/iconos/x-circle.svg"></span>
+                            <div>
+                                <p>PREGUNTA 7</p>
+                                <p *ngIf="results[6]">Correcta </p>
+                                <p *ngIf="!results[6]">Incorrecta </p>
+                            </div>
+                        </div>
+                        <div class="resultado">
+                            <span *ngIf="results[7]"><img src="assets/img/iconos/check-circle.svg"></span>
+                            <span *ngIf="!results[7]"><img src="assets/img/iconos/x-circle.svg"></span>
+                            <div>
+                                <p>PREGUNTA 8</p>
+                                <p *ngIf="results[7]">Correcta </p>
+                                <p *ngIf="!results[7]">Incorrecta </p>
+                            </div>
+                        </div>
+                        <div class="resultado">
+                            <span *ngIf="results[8]"><img src="assets/img/iconos/check-circle.svg"></span>
+                            <span *ngIf="!results[8]"><img src="assets/img/iconos/x-circle.svg"></span>
+                            <div>
+                                <p>PREGUNTA 9</p>
+                                <p *ngIf="results[8]">Correcta </p>
+                                <p *ngIf="!results[8]">Incorrecta </p>
+                            </div>
+                        </div>
+                        <div class="resultado">
+                            <span *ngIf="results[9]"><img src="assets/img/iconos/check-circle.svg"></span>
+                            <span *ngIf="!results[9]"><img src="assets/img/iconos/x-circle.svg"></span>
+                            <div>
+                                <p>PREGUNTA 10</p>
+                                <p *ngIf="results[9]">Correcta </p>
+                                <p *ngIf="!results[9]">Incorrecta </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-50 doble-centrada">
+                        <canvas baseChart
+                                [data]="doughnutChartData"
+                                [labels]="doughnutChartLabels"
+                                [options]="doughnutChartOptions"
+                                [chartType]="doughnutChartType"
+                                [colors]="doughnutChartColors">
+                        </canvas>
+                    </div>
+                </div>
+                <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
+                    <p style="font-size: 18px; padding: 10px 0;">{{mensaje}}</p>
+                </div>
+                <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
+                    <button class="outline" (click)="reset()">Repassar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

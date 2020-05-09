@@ -1,0 +1,114 @@
+table {
+    width: 100%;
+}
+
+th {
+    border: 2px solid $brand-color;
+    background-color: $brand-color;
+    color: white;
+    padding: 20px 40px;
+}
+
+td {
+    border: 2px solid $brand-color;
+    background-color: white;
+    padding: 20px 40px;
+}
+
+/* Vertical tabs */
+
+.tab,
+.tab2 {
+  display: flex;
+  border: 1px solid #d8d8d8;
+  max-width: 1080;
+  margin: 0 auto;
+  opacity: 0;
+  transition: 200 ms ease-in;
+}
+
+.tab.show,
+.tab2.show {
+    opacity: 1;
+}
+
+.tabs,
+.tabs2 {
+  width: 25%;
+}
+
+.tabs div p {
+  font-size: 1.3rem;
+  text-align: center;;
+}
+
+.tabs div,
+.tabs2 div {
+  cursor: pointer;
+  border: 1px solid #d8d8d8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+.tabs div.check,
+.tabs2 div.check {
+  color: white;
+  background-color: #E85611;
+}
+.tabs div:hover,
+.tabs2 div:hover {
+  color: white;
+  background: rgba(60, 60, 60, 0.8);
+}
+
+.content-tabs,
+.content-tabs2 {
+  width: 70%;
+  position: relative;
+  background-color: white;
+  padding: 20px;
+}
+.content-tabs div,
+.content-tabs2 div {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  margin-right: 5px;
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+.content-tabs div.show,
+.content-tabs2 div.show {
+  display: flex;
+}
+.content-tabs div.visible,
+.content-tabs2 div.visible {
+  opacity: 1;
+}
+
+@media (max-width: 440px) {
+  .tab,
+  .tab2 {
+    flex-direction: column;
+  }
+
+  .tabs,
+  .tabs2 {
+    width: 100%;
+  }
+
+  .content-tabs,
+  .content-tabs2 {
+    width: 100%;
+  }
+  .content-tabs,
+  .content-tabs2 div {
+    position: relative;
+  }
+}

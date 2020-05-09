@@ -1,0 +1,54 @@
+<div appScroll class="contenedor condicional">
+    <div class="row">
+        <div class="col-100">
+            <h2>Previ a venir a treballar</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-100">
+            <p class="instructions">Premi sobre les opcions per ampliar la informació.</p>
+            <div class="timeline-img">
+                <div class="item selected" (click)="selectItem(1)">
+                    <div class="item-img">
+                        <img src="assets/img/COVID_9.jpg" alt="">
+                    </div>
+                    <div class="texto-img">
+                        <p>
+                            <b>No pots venir a treballar si has presentat símptomes de COVID-19 </b> (febre, tos o dificultat respiratòria).
+                        </p>
+                    </div>
+                </div>
+                <div class="linea-gris-container">
+                    <div class="linea-gris-container-33">
+                        <div class="linea-gris"></div>
+                    </div>
+                </div>
+                <div class="item" (click)="selectItem(2)">
+                    <div class="item-img">
+                        <img src="assets/img/COVID_10.jpg" alt="">
+                    </div>
+                    <div class="texto-img">
+                        <p>
+                            <b>Si ets persona vulnerable </b> (embarassades, persones amb malalties respiratòries, cardiovasculars, diabetis, hipertensió arterial, càncer o ser persona inmunodeprimida) <b>posa’t en contacte amb el teu metge </b> per valorar si pots venir a treballar.
+                        </p>
+                    </div>
+                </div>
+                <div class="linea-gris-container">
+                    <div class="linea-gris-container-33">
+                        <div class="linea-gris"></div>
+                    </div>
+                </div>
+                <div class="item" (click)="selectItem(3)">
+                    <div class="item-img">
+                        <img src="assets/img/COVID_11.jpg" alt="">
+                    </div>
+                    <div class="texto-img">
+                        <p>
+                            En tots aquests casos, <b>cal que ho comuniquis al sistema públic de salut i portar la baixa laboral</b>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

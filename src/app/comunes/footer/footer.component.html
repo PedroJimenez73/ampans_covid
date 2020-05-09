@@ -1,0 +1,13 @@
+<footer>
+    <button class="outline" (click)="exit()">Sortir</button>
+    <div *ngIf="pantallaIndex > 0">
+        <button *ngIf="pantallaIndex > 0" (click)="prevPantalla()">
+            Anterior
+        </button>
+        <span id="counter"> {{pantallaIndex}} / {{total}}</span>
+        <button *ngIf="pantallaIndex < total && showNext" (click)="nextPantalla()">Següent</button>
+    </div>
+    <div *ngIf="pantallaIndex === 0">
+        <button (click)="nextPantalla()">Iniciar</button>
+    </div>
+</footer>

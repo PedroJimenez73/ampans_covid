@@ -1,0 +1,22 @@
+.mensaje {
+    text-align: center;
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: #ffffff;
+    padding: 0.5em 1em;
+}
+
+.mensaje.condicional {
+    opacity: 0;
+    animation: fadein 0.7s ease-in-out forwards;
+}
+
+.mensaje.verdadero {
+    color: $success-color;
+    border: 1px solid $success-color;
+}
+
+.mensaje.falso {
+    color: $danger-color;
+    border: 1px solid $danger-color;
+}

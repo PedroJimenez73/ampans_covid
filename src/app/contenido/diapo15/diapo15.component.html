@@ -1,0 +1,31 @@
+<div appScroll class="contenedor condicional">
+    <div class="row">
+        <div class="col-100">
+            <div class="actividades mostrada" id="actividad-1">
+                <h3>{{pregunta.id}} {{pregunta.question}}</h3>
+                <hr>
+                <form [formGroup]="form">
+                    <label #labelsRef class="respuesta" *ngFor="let answer of pregunta.answers; let i = index">
+                        <input #inputsRef class="m-r-small" type="radio" formControlName="answerRadio" value="{{abcAnswers[i]}}">
+                            {{abcAnswers[i]}}. {{answer}} 
+                            <img class="incorrecta" src="assets/img/iconos/x-circle.svg" alt="">
+                            <img class="correcta" src="assets/img/iconos/check-circle.svg" alt="">
+                    </label>
+                </form>
+                <div class="col-100" style="margin-top: 1rem; display: flex; justify-content: center;">
+                    <span *ngIf="showMensaje && result === true" class="mensaje verdadero">La resposta és correcta, contínua a la següent!</span>
+                    <span *ngIf="showMensaje && result === false" class="mensaje falso">Ho sentim, la resposta no és correcta, contínua a la següent.</span>
+                    <button *ngIf="!showMensaje" class="outline" (click)="setAnswer()">Comprovar resposta</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="overlay" id="overlay"></div>
+<div id="modal-resume">
+    <span (click)="toggleResumeModal()">&times;</span>
+    <p>Has de completar l'activitat i prémer en comprovar resposta abans d'accedir a la següent activitat.</p>
+    <div>
+        <button (click)="toggleResumeModal()">Acceptar</button>
+    </div>
+</div>

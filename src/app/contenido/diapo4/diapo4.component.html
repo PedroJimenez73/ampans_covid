@@ -1,0 +1,60 @@
+<div appScroll class="contenedor condicional">
+    <div class="row">
+        <div class="col-100">
+            <p class="instructions">Fes clic a cada imatge per veure tota la informació</p>
+            <div #flexyNotIe class="flexy">
+                <div class="flip-card" (click)="flip(1)">
+                    <div class="front-card">
+                        <img src="assets/img/COVID_4.jpg">
+                        <p class="orange-text">
+                            Contacte directe amb secrecions respiratòries 
+                        </p>
+                    </div>
+                    <div class="back-card">
+                        <p>Contacte directe amb secrecions respiratòries en forma de gotes molt petites que surten de la boca o del nas d’una persona quan aquesta està infectada i tus, estornuda o exhala.</p>
+                    </div>
+                </div>                               
+                <div class="flip-card" (click)="flip(2)">
+                    <div class="front-card">
+                        <img src="assets/img/COVID_5.jpg">
+                        <p class="orange-text">
+                            Contacte indirecte amb secrecions respiratòries
+                        </p>
+                    </div >
+                    <div class="back-card">
+                        <p>Poden quedar a sobre d’objectes i mantenir-se un temps on també pot arribar a contagiar si la persona es toca el nas, els ulls o la boca.</p>
+                    </div>
+                </div>
+            </div>
+            <div #flexyIe class="flexy">
+                <div class="ie-card" (click)="flipIE(1)">
+                    <div class="ie-front-card">
+                        <img src="assets/img/COVID_4.jpg">
+                        <p class="orange-text">
+                            Contacte directe amb secrecions respiratòries 
+                        </p>
+                    </div>
+                    <div class="ie-back-card">
+                        <p>Contacte directe amb secrecions respiratòries en forma de gotes molt petites que surten de la boca o del nas d’una persona quan aquesta està infectada i tus, estornuda o exhala.</p>
+                    </div>
+                </div>                               
+                <div class="ie-card" (click)="flipIE(2)">
+                    <div class="ie-front-card">
+                        <img src="assets/img/COVID_5.jpg">
+                        <p class="orange-text">
+                            Contacte indirecte amb secrecions respiratòries
+                        </p>
+                    </div >
+                    <div class="ie-back-card">
+                        <p>Poden quedar a sobre d’objectes i mantenir-se un temps on també pot arribar a contagiar si la persona es toca el nas, els ulls o la boca.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="row">
+        <div class="col-100">
+            <iframe style="display: block; margin: 0 auto; max-width: 100%;" width="560" height="315" src="https://www.youtube.com/embed/PGli_Y9G9UU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>

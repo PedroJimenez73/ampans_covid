@@ -1,0 +1,39 @@
+<div #burger id="burger" class="burger" (click)="toggleMenu()">
+    <div class="barra arriba"></div>
+    <div class="barra medio"></div>
+    <div class="barra abajo"></div>
+</div>
+<header>
+    <div id="title">
+        <h1 [ngClass]="item.class">{{item.text}}</h1>
+    </div>
+    <img src="assets/img/logo.png" alt="Logo Ampans">
+</header>
+<div #lateral id="lateral">
+    <div class="caja-titulo">
+        <div class="filtro">
+            MANIPULADOR D’ALIMENTS
+            <span id="fondo-evol"></span>
+            <span id="evol"></span>
+            <span id="texto-porcentaje"></span>
+        </div>
+    </div>
+    <div class="acordeon-lateral">				
+        <div class="masInfo" *ngFor="let item of menu">
+            <p *ngIf="!item.learned" class="lock">
+                <span>
+                    {{item.text}}
+                </span>
+                <img src="assets/img/iconos/pegatina-gris.svg" alt="">
+            </p>
+            <p *ngIf="item.learned" (click)="navTo(item.page)">
+                <span>
+                    {{item.text}}
+                </span>
+                <img src="assets/img/iconos/pegatina.svg" alt="">
+            </p>
+        </div>												
+        <p class="copy">&copy; 2020 Fundació AMPANS</p>
+    </div>
+</div>
+<div #overlay class="overlay" id="overlay-side"></div>

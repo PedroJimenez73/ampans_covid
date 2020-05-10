@@ -15,6 +15,14 @@ export class Diapo4Component implements OnInit {
     constructor() { }
 
     ngOnInit() {
+        const scrollToTop = window.setInterval(() => {
+        const pos = window.pageYOffset;
+            if (pos > 0) {
+                window.scrollTo(0, pos - 20); 
+            } else {
+                window.clearInterval(scrollToTop);
+            }
+        }, 16);
         const isIEOrEdge = /msie\s|trident\/|edge\//i.test(window.navigator.userAgent)
         if(isIEOrEdge) {
             this.flexyIeRef.nativeElement.style.display = 'flex';

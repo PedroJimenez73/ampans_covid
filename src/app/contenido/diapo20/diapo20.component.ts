@@ -48,6 +48,14 @@ export class Diapo20Component implements OnInit {
     }
 
     checkAnswer() {
+        const scrollToTop = window.setInterval(() => {
+        const pos = window.pageYOffset;
+            if (pos > 0) {
+                window.scrollTo(0, pos - 20); 
+            } else {
+                window.clearInterval(scrollToTop);
+            }
+        }, 16);
         this.showMensaje = true;
         this.lockInput = true;
         this.answersChecked[0] = this.form.get('answerRadio').value;

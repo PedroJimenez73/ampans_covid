@@ -14,7 +14,14 @@ export class Diapo6Component implements OnInit {
     constructor() { }
 
     ngOnInit() {
-
+        const scrollToTop = window.setInterval(() => {
+        const pos = window.pageYOffset;
+            if (pos > 0) {
+                window.scrollTo(0, pos - 20); 
+            } else {
+                window.clearInterval(scrollToTop);
+            }
+        }, 16);
     }
 
     acordeon(id){

@@ -64,10 +64,6 @@ export class ScormStoreService {
             }
         });
         setTimeout(()=> {
-            if(window.ScormProcessGetValue("cmi.core.lesson_location", false)){
-                this.indexPantalla = window.ScormProcessGetValue("cmi.core.lesson_location", false);
-                this.navTo(this.indexPantalla);
-            }
             if (window.ScormProcessGetValue("cmi.suspend_data")) {
                 this.cmiStore = JSON.parse(window.ScormProcessGetValue("cmi.suspend_data"));
                 this.progress = this.cmiStore.progress;
@@ -78,6 +74,11 @@ export class ScormStoreService {
                     results: this.results
                 }
             }
+            if(window.ScormProcessGetValue("cmi.core.lesson_location", false)){
+                this.indexPantalla = window.ScormProcessGetValue("cmi.core.lesson_location", false);
+                this.navTo(this.indexPantalla);
+            }
+
         }, 750);
     }
 

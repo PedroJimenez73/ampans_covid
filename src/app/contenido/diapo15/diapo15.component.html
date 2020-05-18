@@ -1,6 +1,11 @@
 <div appScroll class="contenedor condicional">
     <div class="row">
         <div class="col-100">
+            <p class="instructions">A continuació has de completar 10 preguntes, sent necessari contestar correctament més de l'80%.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-100">
             <div class="actividades mostrada" id="actividad-1">
                 <h3>{{pregunta.id}} {{pregunta.question}}</h3>
                 <hr>
@@ -13,8 +18,8 @@
                     </label>
                 </form>
                 <div class="col-100" style="margin-top: 1rem; display: flex; justify-content: center;">
-                    <span *ngIf="showMensaje && result === true" class="mensaje verdadero">La resposta és correcta, contínua a la següent!</span>
-                    <span *ngIf="showMensaje && result === false" class="mensaje falso">Ho sentim, la resposta no és correcta, contínua a la següent.</span>
+                    <span *ngIf="showMensaje && result === true" class="mensaje verdadero">La resposta és correcta, continua a la següent!</span>
+                    <span *ngIf="showMensaje && result === false" class="mensaje falso">Ho sentim, la resposta no és correcta, continua a la següent.</span>
                     <button *ngIf="!showMensaje" class="outline" (click)="setAnswer()">Comprovar resposta</button>
                 </div>
             </div>

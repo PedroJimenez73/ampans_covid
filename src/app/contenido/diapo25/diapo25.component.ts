@@ -24,6 +24,7 @@ export class Diapo25Component implements OnInit {
     }
     doughnutChartColors = [];
     mensaje: string;
+    pass = false;
     
     constructor(private scormStoreService: ScormStoreService) { }
 
@@ -46,21 +47,21 @@ export class Diapo25Component implements OnInit {
         });
         this.porcentAciertos = Math.round((this.totalAciertos / this.results.length) * 100);
         this.loadChartResultados();
-        if (this.totalAciertos < (this.results.length * 0.5)) {
-			this.mensaje = 'Ho sentim, no has superat les activitats. Pots prémer en repassar per estudiar de nou i tornar a contestar les preguntes o prémer en sortir per finalitzar.';
-		} else if (this.totalAciertos >= (this.results.length * 0.5) && this.totalAciertos < this.results.length) {
-			this.mensaje = 'Has superat les activitats però pots millorar el resultat. Pots prémer en repassar per estudiar de nou i tornar a contestar les preguntes o prémer en sortir per finalitzar.';
-		} else if (this.totalAciertos === this.results.length) {
-			this.mensaje = 'Enhorabona, has superat totes les activitats! Prem sortir per finalitzar.';
+        if (this.totalAciertos < (this.results.length * 0.8)) {
+            this.pass = false;
+			this.mensaje = 'Ho sentim, no has superat les activitats. Pots prémer repassar per estudiar de nou i tornar a contestar les preguntes.';
+		} else {
+            this.pass = true;
+			this.mensaje = 'Enhorabona, has superat les activitats! Prem sortir per finalitzar.';
 		}
     }
     
     loadChartResultados() {
         let resto = 100 - this.porcentAciertos;
         let color;
-        if(this.porcentAciertos >= 50){
+        if(this.porcentAciertos >= 80){
             color = '#008489';
-        } else if (this.porcentAciertos >= 25){
+        } else if (this.porcentAciertos >= 50){
             color = '#ffb822';
         } else {
             color = '#8f0404';

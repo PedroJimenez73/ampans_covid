@@ -151,3 +151,23 @@
   .flexy .ie-back-card p {
     font-size: 18px
   }
+
+
+@media (max-width: $small-device) {
+  p.orange-text {
+    background-color: $brand-color;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: ease-in-out 300ms all;
+    margin: 0 !important;
+  }
+}

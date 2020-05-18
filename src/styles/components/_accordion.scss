@@ -47,6 +47,10 @@
     font-family: $titles-font;
     font-size: 28px;
   }
+
+    .acordeon .masInfo > p > img {
+        min-width: 44px;
+    }
   
   .acordeon .masInfo > p .mas {
     display: inline;
@@ -66,4 +70,16 @@
     padding: 0 40px 20px;
     
   }
+
+@media (max-width: $small-device) {
+    .acordeon .masInfo > p {
+        padding: 20px;
+    }
+    .acordeon .masInfo > p > span {
+        font-size: 22px;
+    }
+    .acordeon .masInfo > p > img {
+        min-width: 28px;
+    }
+}
   

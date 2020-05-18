@@ -96,6 +96,10 @@
         p:nth-child(2){
             font-size: 18px;
         }
+
+        img {
+            min-width: 22px;
+        }
     }
 
     .resultado.correcto {
@@ -185,6 +189,30 @@
             }
         }
     } 
+}
+
+.mensaje-final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p.not-pass {
+        border: 1px solid #f5c6cb;
+        border-radius: 8px;
+        background-color: #f8d7da;
+        color: #721c24;
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+
+    p.pass {
+        border: 1px solid #c3e6cb;
+        border-radius: 8px;
+        background-color: #d4edda;
+        color: #155724;
+        padding: 20px;
+        margin-bottom: 40px;
+    }
 }
 
 

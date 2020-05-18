@@ -29,6 +29,7 @@ export class ScormStoreService {
         {text:"Bones pràctiques",class:"regular", menu: true, question: false, page: null},
         {text:"Si presentes símptomes mentre estàs treballant",class:"regular", menu: true, question: false, page: null},
         {text:"Quins equips de protecció individual hem d’usar?",class:"regular", menu: true, question: false, page: null},
+        {text:"Males pràctiques en l'ús de mascaretes",class:"regular", menu: true, question: false, page: null},
         {text:"Vídeos de Bones Pràctiques",class:"regular", menu: true, question: false, page: null},
         {text:"Exercicis d’autoavaluació",class:"regular", menu: true, question: true, page: null},
         {text:"Exercicis d’autoavaluació",class:"regular", menu: false, question: true, page: null},

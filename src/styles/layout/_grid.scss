@@ -50,6 +50,11 @@
 }
 
 @media (max-width: $small-device) {
+
+    .contenedor {
+        margin: 100px auto 0;
+    }
+    
     .row {
         margin: 0 1em;
         @include flex-column(flex-start, flex-start);

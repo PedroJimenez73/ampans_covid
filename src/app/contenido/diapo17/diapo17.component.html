@@ -13,8 +13,8 @@
                     </label>
                 </form>
                 <div class="col-100" style="margin-top: 1rem; display: flex; justify-content: center;">
-                    <span *ngIf="showMensaje && result === true" class="mensaje verdadero">La resposta és correcta, contínua a la següent!</span>
-                    <span *ngIf="showMensaje && result === false" class="mensaje falso">Ho sentim, la resposta no és correcta, contínua a la següent.</span>
+                    <span *ngIf="showMensaje && result === true" class="mensaje verdadero">La resposta és correcta, continua a la següent!</span>
+                    <span *ngIf="showMensaje && result === false" class="mensaje falso">Ho sentim, la resposta no és correcta, continua a la següent.</span>
                     <button *ngIf="!showMensaje" class="outline" (click)="setAnswer()">Comprovar resposta</button>
                 </div>
             </div>

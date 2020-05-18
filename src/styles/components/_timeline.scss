@@ -160,6 +160,10 @@
             width: 70%;
             opacity: 0;
             transition: opacity 500ms ease-in-out;
+
+            p {
+                padding: 10px;
+            }
         }
 
         &.selected {
@@ -196,6 +200,12 @@
         }
     }
 
+}
+
+@media (max-width: $small-device) {
+    .timeline-img {
+        padding: 0px;
+    }
 }
 
 

@@ -36,6 +36,7 @@ import { Diapo22Component } from './contenido/diapo22/diapo22.component';
 import { Diapo23Component } from './contenido/diapo23/diapo23.component';
 import { Diapo24Component } from './contenido/diapo24/diapo24.component';
 import { Diapo25Component } from './contenido/diapo25/diapo25.component';
+import { Diapo13bisComponent } from './contenido/diapo13bis/diapo13bis.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { Diapo25Component } from './contenido/diapo25/diapo25.component';
     Diapo23Component,
     Diapo24Component,
     Diapo25Component,
+    Diapo13bisComponent,
   ],
   imports: [
     BrowserModule,
@@ -108,6 +110,7 @@ import { Diapo25Component } from './contenido/diapo25/diapo25.component';
     Diapo23Component,
     Diapo24Component,
     Diapo25Component,
+    Diapo13bisComponent,
   ]
 })
 export class AppModule { }

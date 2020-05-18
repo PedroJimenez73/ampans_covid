@@ -107,11 +107,10 @@
                         </canvas>
                     </div>
                 </div>
-                <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
-                    <p style="font-size: 18px; padding: 10px 0;">{{mensaje}}</p>
-                </div>
-                <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
-                    <button class="outline" (click)="reset()">Repassar</button>
+                <div class="mensaje-final">
+                    <p class="pass" *ngIf="pass">{{mensaje}}</p>
+                    <p class="not-pass" *ngIf="!pass">{{mensaje}}</p>
+                    <button *ngIf="!pass" class="outline" (click)="reset()">Repassar</button>
                 </div>
             </div>
         </div>

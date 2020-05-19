@@ -92,6 +92,7 @@ b {
 a {
     color: $brand-color;
     transition: 300ms all ease-in-out;
+    overflow-wrap: anywhere;
 
     &:hover {
         color: $brand-color-hover;

@@ -191,6 +191,13 @@
     } 
 }
 
+@media (max-width: $small-device) {
+
+    .chart-container {
+        display: none;
+    }
+}
+
 .mensaje-final {
     display: flex;
     flex-direction: column;

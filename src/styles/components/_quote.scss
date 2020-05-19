@@ -27,3 +27,20 @@ div.cita p.icon img {
   width: 32px;
   height: 32px;
 }
+
+div.cita .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        margin: 20px;
+    }
+
+}
+
+@media (max-width: $small-device) {
+    div.cita div.links {
+        flex-direction: column;
+    }   
+}

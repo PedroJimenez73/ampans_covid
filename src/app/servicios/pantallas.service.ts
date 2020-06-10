@@ -28,6 +28,7 @@ import { Diapo23Component } from '../contenido/diapo23/diapo23.component';
 import { Diapo24Component } from '../contenido/diapo24/diapo24.component';
 import { Diapo25Component } from '../contenido/diapo25/diapo25.component';
 import { Diapo13bisComponent } from '../contenido/diapo13bis/diapo13bis.component';
+import { Diapo26Component } from '../contenido/diapo26/diapo26.component';
 
 
 @Injectable({
@@ -65,6 +66,7 @@ export class PantallasService {
         new Pantalla(Diapo23Component, {}),
         new Pantalla(Diapo24Component, {}),
         new Pantalla(Diapo25Component, {}),
+        new Pantalla(Diapo26Component, {}),
     ];
 
     constructor() { }

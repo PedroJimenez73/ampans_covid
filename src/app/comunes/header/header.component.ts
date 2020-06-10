@@ -33,7 +33,6 @@ export class HeaderComponent implements OnInit {
                                         this.menu.forEach((element) => {
                                             element.learned = progress[element.page][2]  
                                         });
-                                        console.log(this.menu);
                                     },
                                     (error:any) => {console.log(error)
                                 });

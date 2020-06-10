@@ -28,31 +28,6 @@ function startScorm() {
 
 }
 
-// Resultados
-
-function saveResultsPr(res1) {
-    resultados.primera = res1;
-    console.log(resultados);
-    var resultadosStr = JSON.stringify(resultados);
-    ScormProcessSetValue("cmi.suspend_data", resultadosStr);
-}
-
-function RecordTest(){
-
-    let score = ((resultados.correctas1 + resultados.correctas2) / 7) * 100;
-
-    ScormProcessSetValue("cmi.core.score.raw", score);
-    ScormProcessSetValue("cmi.core.score.min", "0");
-    ScormProcessSetValue("cmi.core.score.max", "100");
-    
-    if (score >= 50){
-        ScormProcessSetValue("cmi.core.lesson_status", "passed");
-    }
-    else{
-        ScormProcessSetValue("cmi.core.lesson_status", "failed");
-    }
-}
-
 function doUnload(pressedExit){
         
     //don't call this function twice

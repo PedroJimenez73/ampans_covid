@@ -42,6 +42,22 @@ export class FooterComponent implements OnInit {
     }
 
     nextPantalla() {
+        if(this.pantallaIndex === 26) {
+            this.results = [];
+            this.totalAciertos = 0;
+            for (let i = 0; i < 10; i ++) {
+                this.results.push(this.scormStoreService.getResults()[i].result)
+            }
+            this.results.forEach(elem => {
+                if(elem) {
+                    this.totalAciertos++;
+                }
+            });
+            this.porcentAciertos = Math.round((this.totalAciertos / this.results.length) * 100);
+            if(this.porcentAciertos >= 80) {
+                this.scormStoreService.passUnit();
+            }
+        }
         this.scormStoreService.nextPantalla()
     }
 

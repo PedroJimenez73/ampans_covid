@@ -195,8 +195,7 @@ function ScormProcessSetValue(element, value){
         
         var errorDescription = "Número: " + errorNumber + "\nDescripción: " + errorString + "\nDiagnóstico: " + diagnostic;
         
-        alert("Error - No se pudo establecer la comunicación con la plataforma  LMS.\n\nSus resultados podrían no haber sido grabados.\n\n" + errorDescription);
+        console.log("Error - No se pudo establecer la comunicación con la plataforma  LMS.\n\nSus resultados podrían no haber sido grabados.\n\n" + errorDescription);
         return;
-    }
-    
+    }    
 }

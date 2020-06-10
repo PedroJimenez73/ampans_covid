@@ -52,7 +52,7 @@ export class Diapo25Component implements OnInit {
 			this.mensaje = 'Ho sentim, no has superat les activitats. Pots prémer repassar per estudiar de nou i tornar a contestar les preguntes.';
 		} else {
             this.pass = true;
-			this.mensaje = 'Enhorabona, has superat les activitats! Prem sortir per finalitzar.';
+			this.mensaje = 'Enhorabona, has superat les activitats! Prem Següent per finalitzar.';
 		}
     }
     

@@ -103,7 +103,9 @@ export class ScormStoreService {
         this.progress[this.indexPantalla][2] = true;
         this.cmiStore.progress = this.progress;
         let cmiStoreStr = JSON.stringify(this.cmiStore);
-        window.ScormProcessSetValue("cmi.suspend_data", cmiStoreStr);
+        setTimeout(() => {
+            window.ScormProcessSetValue("cmi.suspend_data", cmiStoreStr);
+        }, 500);
         this.navToPage();
     }
 
@@ -114,15 +116,15 @@ export class ScormStoreService {
 
     navToPage() {
         this.stateIn.next({menu: this.diapos, currentPantalla: this.indexPantalla, progress: this.progress});
-        window.ScormProcessSetValue("cmi.core.lesson_location", (this.indexPantalla).toString());
-        if (this.indexPantalla === (this.diapos.length - 1)){
-            // reachedEnd = true;
-            console.log('finalizado')
-            window.ScormProcessSetValue("cmi.core.lesson_status", "completed");
-        }
-        if (window.ScormProcessGetValue("cmi.core.lesson_status")) {
-            console.log(window.ScormProcessGetValue("cmi.core.lesson_status"));
-        }
+        setTimeout(() => {
+            window.ScormProcessSetValue("cmi.core.lesson_location", (this.indexPantalla).toString());
+            if (this.indexPantalla === (this.diapos.length - 1)){
+                window.ScormProcessSetValue("cmi.core.lesson_status", "completed");
+            }
+            if (window.ScormProcessGetValue("cmi.core.lesson_status")) {
+                console.log(window.ScormProcessGetValue("cmi.core.lesson_status"));
+            }
+        }, 500);
     }
 
     getResults() {
@@ -135,7 +137,9 @@ export class ScormStoreService {
         this.stateIn.next({menu: this.diapos, currentPantalla: this.indexPantalla, progress: this.progress});
         this.cmiStore.results = this.results;
         let cmiStoreStr = JSON.stringify(this.cmiStore);
-        window.ScormProcessSetValue("cmi.suspend_data", cmiStoreStr);
+        setTimeout(() => {
+            window.ScormProcessSetValue("cmi.suspend_data", cmiStoreStr);
+        }, 500);
         let totalAciertos = 0;
         this.results.forEach((element) => {
             if(element.result) {
@@ -143,14 +147,20 @@ export class ScormStoreService {
             }
         });
         let score = Math.round((totalAciertos / (this.results.length - 1)) * 100);
-        window.ScormProcessSetValue("cmi.core.score.raw", score);
-        window.ScormProcessSetValue("cmi.core.score.min", "0");
-        window.ScormProcessSetValue("cmi.core.score.max", "100");
+        setTimeout(() => {
+            window.ScormProcessSetValue("cmi.core.score.raw", score);
+            window.ScormProcessSetValue("cmi.core.score.min", "0");
+            window.ScormProcessSetValue("cmi.core.score.max", "100");
+        }, 500);
         if (score >= 80){
-            window.ScormProcessSetValue("cmi.core.lesson_status", "passed");
+            setTimeout(() => {
+                window.ScormProcessSetValue("cmi.core.lesson_status", "passed");
+            }, 500);
         }
         else{
-            window.ScormProcessSetValue("cmi.core.lesson_status", "failed");
+            setTimeout(() => {
+                window.ScormProcessSetValue("cmi.core.lesson_status", "failed");
+            }, 500);
         }
     }
 
@@ -164,9 +174,10 @@ export class ScormStoreService {
 
     exit() {
         window.ScormProcessSetValue("cmi.core.exit", "suspend");
+        window.doUnload(true);
         setTimeout(() => {
             top.window.close()
-        }, 100);
+        }, 500);
     }
 
     passUnit() {
@@ -188,7 +199,9 @@ export class ScormStoreService {
         this.cmiStore.results = this.results;
         this.cmiStore.progress = this.progress;
         let cmiStoreStr = JSON.stringify(this.cmiStore);
-        window.ScormProcessSetValue("cmi.suspend_data", cmiStoreStr);
+        setTimeout(() => {
+            window.ScormProcessSetValue("cmi.suspend_data", cmiStoreStr);
+        }, 500);
         let totalAciertos = 0;
         this.results.forEach((element) => {
             if(element.result) {
@@ -196,14 +209,20 @@ export class ScormStoreService {
             }
         });
         let score = Math.round((totalAciertos / (this.results.length - 1)) * 100);
-        window.ScormProcessSetValue("cmi.core.score.raw", score);
-        window.ScormProcessSetValue("cmi.core.score.min", "0");
-        window.ScormProcessSetValue("cmi.core.score.max", "100");
+        setTimeout(() => {
+            window.ScormProcessSetValue("cmi.core.score.raw", score);
+            window.ScormProcessSetValue("cmi.core.score.min", "0");
+            window.ScormProcessSetValue("cmi.core.score.max", "100");
+        }, 500);
         if (score >= 80){
-            window.ScormProcessSetValue("cmi.core.lesson_status", "passed");
+            setTimeout(() => {
+                window.ScormProcessSetValue("cmi.core.lesson_status", "passed");
+            }, 500);
         }
         else{
-            window.ScormProcessSetValue("cmi.core.lesson_status", "failed");
+            setTimeout(() => {
+                window.ScormProcessSetValue("cmi.core.lesson_status", "failed");
+            }, 500);
         }
     }
 

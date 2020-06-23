@@ -38,12 +38,14 @@ import { Diapo24Component } from './contenido/diapo24/diapo24.component';
 import { Diapo25Component } from './contenido/diapo25/diapo25.component';
 import { Diapo13bisComponent } from './contenido/diapo13bis/diapo13bis.component';
 import { Diapo26Component } from './contenido/diapo26/diapo26.component';
+import { ScrollDirective } from './directivas/scroll.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LoadDirective,
+    ScrollDirective,
     PantallaComponent,
     FooterComponent,
     PortadaComponent,

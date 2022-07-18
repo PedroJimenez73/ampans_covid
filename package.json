@@ -21,7 +21,7 @@
     "@angular/router": "~8.2.9",
     "chart.js": "^2.9.2",
     "jquery": "^3.4.1",
-    "jquery-ui": "^1.12.1",
+    "jquery-ui": "^1.13.2",
     "jquery-ui-dist": "^1.12.1",
     "jquery-ui-touch-punch": "^0.2.3",
     "ng2-charts": "^2.3.0",
